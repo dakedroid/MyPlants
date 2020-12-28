@@ -1,5 +1,6 @@
 package mx.com.divaga.myplants
 
+import mx.com.divaga.myplants.dto.Plant
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -43,6 +44,7 @@ class ExampleUnitTest {
 
     }
 
+    @Test
     fun confirmEasternRedbud_outputsEasternRedbud(){
 
         var plant: Plant = Plant("Cercis", "Canadiense", "Eastern Redbud")
