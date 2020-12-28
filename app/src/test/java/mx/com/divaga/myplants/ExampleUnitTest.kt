@@ -1,5 +1,6 @@
 package mx.com.divaga.myplants
 
+import mx.com.divaga.myplants.dto.Plant
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -41,6 +42,14 @@ class ExampleUnitTest {
     fun addFiveandthree_equalsEight (){
         assertEquals(8 , 5 + 3)
 
+    }
+
+    @Test
+    fun confirmEasternRedbud_outputsEasternRedbud(){
+
+        var plant: Plant = Plant("Cercis", "Canadiense", "Eastern Redbud")
+
+        assertEquals("Eastern Redbud", plant.toString())
     }
 
 
