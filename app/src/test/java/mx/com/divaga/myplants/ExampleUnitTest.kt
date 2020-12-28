@@ -31,5 +31,10 @@ class ExampleUnitTest {
         assertEquals(6 , 3 + 3)
     }
 
+    @Test
+    fun addFiveandtwo_equalsSeven(){
+        assertEquals(7 , 5 + 2)
+    }
+
 
 }
