@@ -37,5 +37,11 @@ class ExampleUnitTest {
         //
     }
 
+    @Test
+    fun addFiveandthree_equalsEight (){
+        assertEquals(8 , 5 + 3)
+
+    }
+
 
 }
