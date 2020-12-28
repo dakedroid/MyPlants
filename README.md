@@ -54,4 +54,10 @@ Suposicion 2
   Species: canadensis
   
   Common: Easter
+  
+  ### OTRA SECCION
+  
+  **Main Activity:** Esta es la actividad principal.
+  
+  **SpecimentDetailsActivity:** Muestra detalles de las plantas.
 
