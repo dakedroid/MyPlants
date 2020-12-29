@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyPlants</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="zeropointzero">0.0</string>
+    <string name="plant_hint">Type a plant</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_date_planted">Date Planted</string>
 </resources>
