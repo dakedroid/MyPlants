@@ -2,8 +2,10 @@ package mx.com.divaga.myplants
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
+import io.mockk.confirmVerified
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.verify
 import mx.com.divaga.myplants.dto.Plant
 import mx.com.divaga.myplants.service.PlantService
 import mx.com.divaga.myplants.ui.main.MainViewModel
@@ -41,8 +43,10 @@ class PlantDataUnitTest {
         givenAfeedOfMockedPlantDataAreAvailable()
         whenSearchForRedbud()
         thenResultContainsEasternRedbud()
+        thenVerifyunctionsInvoke()
 
     }
+
 
     private fun givenAfeedOfMockedPlantDataAreAvailable() {
         mViewModel = MainViewModel()
@@ -87,6 +91,13 @@ class PlantDataUnitTest {
             }
         }
         assertTrue(redbudFound)
+    }
+
+
+    private fun thenVerifyunctionsInvoke() {
+        verify { plantService.fetchPlants("Redbud") }
+        verify(exactly = 0) {plantService.fetchPlants("Maple")}
+        confirmVerified(plantService )
     }
 
     @Test
